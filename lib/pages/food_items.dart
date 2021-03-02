@@ -54,10 +54,183 @@ Widget FoodItems() {
               ],
             ),
           ),
+          Container(
+            child: Column(
+              children: <Widget>[
+                AddedItems(
+                  title: 'Turkish Tea',
+                  priceEach: 1.50,
+                  countEach: 2,
+                ),
+                AddedItems(
+                  title: 'Chateau Emilion',
+                  priceEach: 3.75,
+                  countEach: 1,
+                ),
+                AddedItems(
+                  title: 'Bakava',
+                  priceEach: 1.50,
+                  countEach: 2,
+                ),
+                AddedItems(
+                  title: 'Brownie & ice',
+                  priceEach: 5.50,
+                  countEach: 1,
+                ),
+              ],
+            ),
+          ),
+          Expanded(
+            child: Container(
+              margin: EdgeInsets.only(top: 15.0, right: 20.0, bottom: 10.0),
+              padding: EdgeInsets.only(right: 7.0, left: 10.0),
+              height: 40.0,
+              // width: 100.0,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(10.0),
+                border: Border.all(
+                  width: 0.5,
+                  color: Colors.grey[300],
+                ),
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  Row(
+                    children: [
+                      Icon(
+                        Icons.alarm,
+                        size: 18,
+                      ),
+                      SizedBox(width: 8.0),
+                      Text(
+                        '4 Items added',
+                        style: TextStyle(
+                            fontWeight: FontWeight.normal,
+                            color: Colors.black,
+                            fontSize: 14.0),
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    width: 40.0,
+                  ),
+                  Text(
+                    '\$20',
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                        fontSize: 14.0),
+                  ),
+                  Container(
+                    width: 27.0,
+                    height: 27.0,
+                    decoration: BoxDecoration(
+                      color: Colors.grey[200],
+                      borderRadius: BorderRadius.circular(7.0),
+                      // border: Border.all(width: 0.8, color: Colors.grey[300]),
+                    ),
+                    child: Icon(
+                      Icons.arrow_right,
+                      size: 15.0,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          )
         ],
       ),
     ),
   );
+}
+
+class AddedItems extends StatelessWidget {
+  const AddedItems({
+    Key key,
+    this.title,
+    this.priceEach,
+    this.countEach,
+  }) : super(key: key);
+
+  final String title;
+  final dynamic priceEach;
+  final int countEach;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      // color: Colors.grey,
+      margin: EdgeInsets.only(left: 20.0, right: 20.0, top: 20.0),
+      child: Column(
+        children: <Widget>[
+          Container(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Text(
+                      title,
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black,
+                          fontSize: 16.0),
+                    ),
+                    SizedBox(height: 5.0),
+                    Text(
+                      '\$$priceEach each',
+                      style: TextStyle(
+                          fontWeight: FontWeight.normal,
+                          color: Colors.grey[600],
+                          fontSize: 13.0),
+                    ),
+                  ],
+                ),
+                Container(
+                  height: 35.0,
+                  width: 70.0,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(17.5),
+                    border: Border.all(
+                      width: 0.5,
+                      color: Colors.grey[300],
+                    ),
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: <Widget>[
+                      Icon(
+                        Icons.add,
+                        size: 15.0,
+                        color: Colors.grey,
+                      ),
+                      Text(
+                        "$countEach",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black,
+                          fontSize: 14.0,
+                        ),
+                      ),
+                      Icon(
+                        Icons.horizontal_rule,
+                        size: 15.0,
+                        color: Colors.grey,
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          )
+        ],
+      ),
+    );
+  }
 }
 
 Widget mealsBox(title, price) {
@@ -135,11 +308,6 @@ Widget mealsBox(title, price) {
                 ),
               ),
             ),
-            Container(
-              child: Column(
-                children: <Widget>[],
-              ),
-            )
           ],
         ),
         Text(

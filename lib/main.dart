@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:img_to_real_1/pages/food_items.dart';
+import 'package:img_to_real_1/pages/friends.dart';
 import 'pages/weare_going.dart';
 
 void main() {
@@ -27,7 +28,7 @@ class Home extends StatefulWidget {
 }
 
 class HomeState extends State<Home> {
-  bool button_1 = false;
+  bool button_1 = true;
   bool button_2 = false;
   bool button_3 = false;
   bool button_4 = false;
@@ -38,9 +39,9 @@ class HomeState extends State<Home> {
     } else if (button_2 == true) {
       return FoodItems();
     } else if (button_3 == true) {
-      return FoodItems();
+      return Friends();
     } else if (button_4 == true) {
-      return FoodItems();
+      return Friends();
     }
   }
 
