@@ -63,18 +63,18 @@ Widget FoodItems() {
                 ),
                 AddedItems(
                   title: 'Chateau Emilion',
-                  priceEach: 3.75,
-                  countEach: 1,
+                  priceEach: 1.45,
+                  countEach: 5,
                 ),
                 AddedItems(
                   title: 'Bakava',
-                  priceEach: 1.50,
-                  countEach: 2,
+                  priceEach: 1.45,
+                  countEach: 5,
                 ),
                 AddedItems(
                   title: 'Brownie & ice',
-                  priceEach: 5.50,
-                  countEach: 1,
+                  priceEach: 1.45,
+                  countEach: 5,
                 ),
               ],
             ),
@@ -104,7 +104,7 @@ Widget FoodItems() {
                       ),
                       SizedBox(width: 8.0),
                       Text(
-                        '4 Items added',
+                        '7 Items added',
                         style: TextStyle(
                             fontWeight: FontWeight.normal,
                             color: Colors.black,
@@ -116,7 +116,7 @@ Widget FoodItems() {
                     width: 40.0,
                   ),
                   Text(
-                    '\$20',
+                    '\$123',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
                         color: Colors.black,

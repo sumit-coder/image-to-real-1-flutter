@@ -218,7 +218,7 @@ Widget WeAreGoing() {
                                 ),
                                 child: Center(
                                   child: Text(
-                                    '+5',
+                                    '+2',
                                     style: TextStyle(
                                       color: Colors.white,
                                       fontSize: 11.0,
