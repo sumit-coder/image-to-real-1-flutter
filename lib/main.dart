@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:img_to_real_1/pages/food_items.dart';
 import 'package:img_to_real_1/pages/friends.dart';
 import 'package:img_to_real_1/pages/profile.dart';
+import 'package:img_to_real_1/pages/total_bills.dart';
 import 'pages/weare_going.dart';
 
 void main() {
@@ -40,7 +41,7 @@ class HomeState extends State<Home> {
     } else if (button_2 == true) {
       return FoodItems();
     } else if (button_3 == true) {
-      return Friends();
+      return TotalBill();
     } else if (button_4 == true) {
       return Friends();
     }
