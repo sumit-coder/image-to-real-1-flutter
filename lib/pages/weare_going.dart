@@ -1,3 +1,5 @@
+// import 'dart:js';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -7,18 +9,22 @@ Widget WeAreGoing() {
       // color: Colors.grey,
       child: Column(
         children: <Widget>[
-          Align(
-            alignment: Alignment.centerRight,
-            child: FlatButton(
-              height: 20.0,
-              padding: EdgeInsets.all(0.0),
-              child: Text(
-                'PROFILE',
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12.0),
-              ),
-              onPressed: () {},
-            ),
-          ),
+          // Align(
+          //   alignment: Alignment.centerRight,
+          //   child: FlatButton(
+          //     height: 20.0,
+          //     padding: EdgeInsets.all(0.0),
+          //     child: Text(
+          //       'PROFILE',
+          //       style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12.0),
+          //     ),
+          //     onPressed: () {
+          //       // Navigator.push(context, MaterialPageRoute(builder: (context) {
+          //       //   return Profile();
+          //       // }));
+          //     },
+          //   ),
+          // ),
           Container(
             margin: EdgeInsets.fromLTRB(20.0, 0.0, 20.0, 10.0),
             height: 200.0,

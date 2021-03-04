@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:img_to_real_1/pages/food_items.dart';
 import 'package:img_to_real_1/pages/friends.dart';
+import 'package:img_to_real_1/pages/profile.dart';
 import 'pages/weare_going.dart';
 
 void main() {
@@ -33,7 +34,7 @@ class HomeState extends State<Home> {
   bool button_3 = false;
   bool button_4 = false;
 
-  returnPage() {
+  returnPage(context) {
     if (button_1 == true) {
       return WeAreGoing();
     } else if (button_2 == true) {
@@ -112,7 +113,39 @@ class HomeState extends State<Home> {
             ],
           ),
         ),
-        returnPage()
+        Expanded(
+          child: Column(
+            children: <Widget>[
+              Align(
+                alignment: Alignment.centerRight,
+                child: FlatButton(
+                  height: 20.0,
+                  padding: EdgeInsets.all(0.0),
+                  child: Text(
+                    'PROFILE',
+                    style:
+                        TextStyle(fontWeight: FontWeight.bold, fontSize: 12.0),
+                  ),
+                  onPressed: () {
+                    // Navigator.push(
+                    //   context,
+                    //   MaterialPageRoute(
+                    //     builder: (context) {
+                    //       return Profile();
+                    //     },
+                    //   ),
+                    // );
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Profile()),
+                    );
+                  },
+                ),
+              ),
+              returnPage(context)
+            ],
+          ),
+        ),
       ],
     );
   }
